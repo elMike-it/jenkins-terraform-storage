@@ -33,8 +33,7 @@ pipeline {
                 docker {
                     image 'hashicorp/terraform:latest' // Imagen oficial de Terraform
                     //args '-u root' // Permite ejecutar comandos como usuario root
-                    args '' // Esto elimina conflictos de ENTRYPOINT
-                    entrypoint=''
+                    args '--entrypoint=""' // Esto elimina conflictos de ENTRYPOINT
                 }
             }
             stages {
