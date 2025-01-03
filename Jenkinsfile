@@ -34,7 +34,6 @@ pipeline {
                     image 'hashicorp/terraform:latest' // Imagen oficial de Terraform
                     //args '-u root' // Permite ejecutar comandos como usuario root
                     args '' // Esto elimina conflictos de ENTRYPOINT
-                    command '' // Asegura que Jenkins controle el contenedor
                 }
             }
             stages {
