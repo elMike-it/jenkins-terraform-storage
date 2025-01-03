@@ -23,7 +23,7 @@ pipeline {
                     gcloud config set project $PROJECT_ID
                     gcloud auth list
                     gcloud auth configure-docker us-central1-docker.pkg.dev
-                    terraform -version
+                    terraform version
                     """
                      }
                 }
