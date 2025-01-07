@@ -21,7 +21,10 @@ pipeline {
                     sh """
                     gcloud auth activate-service-account --key-file=$GOOGLE_TERRAFORM_APPLICATION_CREDENTIALS
                     gcloud config set project $PROJECT_ID
+                    echo "Project ID: $PROJECT_ID"
+                    echo "Google Auth:"
                     gcloud auth list
+                    gcloud projects describe $PROJECT_ID
                     """
                      }
                 }
