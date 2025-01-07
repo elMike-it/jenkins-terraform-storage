@@ -5,7 +5,7 @@ pipeline {
         SERVICE_NAME = 'mike-cloud-run-service'
         REGION = 'us-central1' // e.g., us-central1
         IMAGE_NAME = "gcr.io/${PROJECT_ID}/${SERVICE_NAME}"
-        GCP_KEYFILE = credentials('gcp-terraform-service-account-key') // Configurado en Jenkins
+        //GCP_KEYFILE = credentials('gcp-terraform-service-account-key') // Configurado en Jenkins
     }
     stages {
         stage('Checkout Code') {
